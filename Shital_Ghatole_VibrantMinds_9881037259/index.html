@@ -42,8 +42,8 @@
 <body>
     <div class="container">
         <div class="container1"> 
-            <div id="block1">1</div>
-            <div id="block2">2</div>
+            <div id="block1"></div>
+            <div id="block2"></div>
         </div>
     
         <div class="buttons">
@@ -52,8 +52,8 @@
         </div>
 
         <div class="container2">
-            <div id="block3">3</div>
-            <div id="block4">4</div>
+            <div id="block3"></div>
+            <div id="block4"></div>
     
         </div>
     </div>
@@ -71,10 +71,10 @@
 
     function clockwise() {
         j = j + 1; 
-        b1.style.backgroundColor = colors[(j + 4) % 4]; 
-        b2.style.backgroundColor = colors[(j + 3) % 4]; 
-        b3.style.backgroundColor = colors[(j + 2) % 4]; 
-        b4.style.backgroundColor = colors[(j + 1) % 4]; 
+        b1.style.backgroundColor = colors[(j + 3) % 4]; 
+        b2.style.backgroundColor = colors[(j + 2) % 4]; 
+        b3.style.backgroundColor = colors[(j + 1) % 4]; 
+        b4.style.backgroundColor = colors[(j + 0) % 4]; 
     }
 
     function antiClockwise() {
