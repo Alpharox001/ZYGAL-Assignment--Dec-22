@@ -1,257 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Zygal Assignment Advanced</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
-        * {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .main-div {
-            
-            /* display: flex; */
-            justify-content: center;
-            height: 100%;
-            padding: 3%;
-            border-radius: 80px;
-            background-image: linear-gradient(to right top, #00ffe8, #25f6f8, #54ebff, #7adffd, #97d4f4);
-            
-        }
-
-        .dropdown-div {
+        .container1 {
             display: flex;
-            justify-content: center;
         }
-
-        p {
-            font-family: 'Montserrat', sans-serif;
+        
+        #block1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
         }
-
-        .months,
-        .years {
-            padding: 2%;
-            margin: 2%;
-            /* position: relative; */
-            font-family: 'Times New Roman';
-            font-size: 150%;
-            border-radius: 40px;
-            font-family: 'Montserrat', sans-serif;
-            background-color: transparent;
+        
+        #block2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
         }
-
-        .years:hover, 
-        .months:hover, 
-        .input:hover {
-            border: 1px solid #2ecc70;
-            transition: .2s ease-in;
+        
+        .container2 {
+            display: flex;
         }
-
-        .input {
-            padding: 1% 1%;
-            font-family: 'Times New Roman';
-            font-size: 150%;
-            width: 15%;
-            border-radius: 40px;
-            border: 1px solid transparent;
-            background-color: #2ecc7042;
-            font-family: 'Montserrat', sans-serif;
+        
+        #block3 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
         }
-
-        .button {
-            padding: 1% 1%;
-            font-family: 'Times New Roman';
-            font-size: 150%;
-            width: 10%;
-            background-color: mediumspringgreen;
-            border: none;
-            border-radius: 40px;
-            font-family: 'Montserrat', sans-serif;
+        
+        #block4 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
         }
-
-        .button:hover {
-            background-color: rgb(0, 204, 126);
-            transition: .2s ease-in;
-
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        .weekdays {
-            margin: 0%;
-            padding: 1% 0%;
-            border: 1px solid;
-            background-color: #2ecc7063;
-            border-top-right-radius: 40px;
-            border-top-left-radius: 40px;
-            border: 1px solid grey;
-        }
-
-        .sunday {
-            color: red;
-        }
-
-        .weekdays li {
-            display: inline-block;
-            width: 13%;
-            text-align: center;
-            padding: 1% 0%;
-            font-size: 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bolder;
-            border-top-right-radius: 40px;
-            border-top-left-radius: 40px;
-        }
-
-        .days {
-            padding: 1% 0%;
-            margin: 0;
-            border: 1px solid grey;
-            border-bottom-right-radius: 40px;
-            border-bottom-left-radius: 40px;
-        }
-
-        .days li {
-            list-style-type: none;
-            display: inline-block;
-            width: 13%;
-            text-align: center;
-            margin-bottom: 5px;
-            font-size: 20px;
-            padding: 1% 0%;
-        }
-
-        form {
-            text-align: center;
-        }
-
     </style>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
-
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="main-div">
-        <div>
-            <div class="dropdown-div">
-                <select name="months" id="months" class="months" onchange="monthsDays()">
-                    <option disabled selected value="0">Select Month</option>
-                    <option value="jan">January</option>
-                    <option value="feb">February</option>
-                    <option value="mar">March</option>
-                    <option value="apr">April</option>
-                    <option value="may">May</option>
-                    <option value="jun">June</option>
-                    <option value="jul">July</option>
-                    <option value="aug">Augest</option>
-                    <option value="sep">September</option>
-                    <option value="oct">October</option>
-                    <option value="nov">November</option>
-                    <option value="dec">December</option>
-                </select>
-                <select name="years" id="years" class="years" onchange="monthsDays()">
-                    <option disabled selected>Select Year</option>
-                    <option value="1999">1999</option>
-                    <option value="2000">2000</option>
-                    <option value="2001">2001</option>
-                    <option value="2002">2002</option>
-                    <option value="2003">2003</option>
-                    <option value="2004">2004</option>
-                    <option value="2005">2005</option>
-                    <option value="2006">2006</option>
-                    <option value="2007">2007</option>
-                    <option value="2008">2008</option>
-                    <option value="2009">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                </select>
-            </div>
-            <div>
-                <ul class="weekdays">
-                    <li>MON</li>
-                    <li>TUE</li>
-                    <li>WED</li>
-                    <li>THR</li>
-                    <li>FRI</li>
-                    <li>SAT</li>
-                    <li class="sunday">SUN</li>
-                </ul>
+    <div class="container">
+        <div class="container1"> 
+            <div id="block1">1</div>
+            <div id="block2">2</div>
+        </div>
+    
+        <div class="buttons">
+            <button onclick="clockwise()">Clockwise</button>
+            <button onclick="antiClockwise()">Anti-clockwise</button>
+        </div>
 
-                <ul class="days" id="days-of-month">
-                    <h5 align="center"><p>Please select "Month" or "Year" to display days</p></h5>
-                </ul>
-
-            </div>
-            <br><br>
-            <div>
-                <form>
-                    <input type="number" class="input" id="enteredDay" placeholder="Enter any day" onchange="monthsDays()"
-                        min="1" max="31"></input>
-                    <button type="button" class="button" onclick="monthsDays()">Enter</button>
-                </form>
-            </div>
+        <div class="container2">
+            <div id="block3">3</div>
+            <div id="block4">4</div>
+    
         </div>
     </div>
+    
+<script>
+    const a1 = document.getElementById("block1"); 
+    const a2 = document.getElementById("block2"); 
+    const a4 = document.getElementById("block3"); 
+    const a3 = document.getElementById("block4"); 
 
-    <script>
+    let i = 0; 
+    let j = 0; 
 
-        var enteredDay = document.getElementsByTagName("input")[0].value;
+    const colors = ["red", "yellow", "orange", "green"];
 
-        var getYear = () => document.getElementById("years").value;
-        var getDays = () => {
+    function clockwise() {
+        j = j + 1; 
+        a1.style.backgroundColor = colors[(j + 4) % 4]; 
+        a2.style.backgroundColor = colors[(j + 3) % 4]; 
+        a3.style.backgroundColor = colors[(j + 2) % 4]; 
+        a4.style.backgroundColor = colors[(j + 1) % 4]; 
+    }
 
-            var selectedMonth = document.getElementById("months").value;
-            var days = 31;
-            if ((selectedMonth == 'apr') || (selectedMonth == 'jun') || (selectedMonth == 'sep') || (selectedMonth == 'nov')) {
-                return days = 30;
-            } else if (selectedMonth == "feb") {
-                let year = getYear();
-                const leap = new Date(year, 1, 29).getDate() === 29;
-                if (leap) {
-                    return days = 29;
-                } else {
-                    return days = 28;
-                }
-            } else {
-                return days = 31;
-            }
-        }
-
-        var daysOfMonth = () => {
-            let days = getDays();
-            var str = '<li></li>'.repeat(3);
-            for (let day = 1; day <= days; day++) {
-                if (document.getElementById("enteredDay").value == day) {
-                    if ("green" == document.getElementById("enteredDay").style.backgroundColor) {
-                        str = str + (`<li id=${day}>${day}</li>`);
-                    } else {
-                        str = str + (`<li id=${day}><span style="background: green; padding: 10px 35px">${day}<span></li>`);
-                    }
-                } else {
-                    str = str + (`<li>${day}</li>`);
-                }
-            }
-            return str;
-        }
-        var monthsDays = () => document.getElementById("days-of-month").innerHTML = daysOfMonth();
-    </script>
+    function antiClockwise() {
+        i = i + 1; 
+        a1.style.backgroundColor = colors[(i + 1) % 4]; 
+        a2.style.backgroundColor = colors[(i + 2) % 4]; 
+        a3.style.backgroundColor = colors[(i + 3) % 4]; 
+        a4.style.backgroundColor = colors[(i + 4) % 4];
+    }
+</script>
 </body>
-
 </html>
